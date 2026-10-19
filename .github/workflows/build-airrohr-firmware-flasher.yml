@@ -59,19 +59,19 @@ jobs:
         shell: bash
       - name: Archive built binaries (Linux)
         if: runner.os == 'Linux'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: airrohr-flasher-dist-${{ matrix.os }}-python${{ matrix.python-version }}
           path: dist/airrohr-flasher
       - name: Archive built binaries (OS X)
         if: runner.os == 'macOS'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: airrohr-flasher-dist-${{ matrix.os }}-python${{ matrix.python-version }}
           path: dist/airrohr-flasher.dmg
       - name: Archive built binaries (Windows)
         if: runner.os == 'Windows'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: airrohr-flasher-dist-${{ matrix.os }}-python${{ matrix.python-version }}
           path: dist/airrohr-flasher.exe
