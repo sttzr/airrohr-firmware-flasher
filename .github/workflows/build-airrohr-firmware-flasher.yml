@@ -1,6 +1,9 @@
 name: Build Airrohr Firmware Flasher CI
 
-on: [push, pull_request, fork]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
